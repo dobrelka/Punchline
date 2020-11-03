@@ -19,4 +19,8 @@ class JokeServiceTestUsingMockWebServer {
         .build()
   }
 
+  private val jokeService by lazy {
+    retrofit.create(JokeService::class.java)
+  }
+
 }
