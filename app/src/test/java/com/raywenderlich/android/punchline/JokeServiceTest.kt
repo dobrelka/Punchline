@@ -1,6 +1,7 @@
 package com.raywenderlich.android.punchline
 
 import com.jakewharton.retrofit2.adapter.rxjava2.RxJava2CallAdapterFactory
+import com.nhaarman.mockitokotlin2.mock
 import junit.framework.Assert.assertEquals
 import okhttp3.mockwebserver.MockResponse
 import okhttp3.mockwebserver.MockWebServer
@@ -53,6 +54,13 @@ class JokeServiceTestUsingMockWebServer {
     testObserver.assertNoErrors()
     assertEquals("/random_joke.json",
         mockWebServer.takeRequest().path)
+  }
+
+  class JokeServiceTestMockingService() {
+
+    private val jokeService: JokeService = mock()
+    private val repository = RepositoryImpl(jokeService)
+
   }
 
 }
