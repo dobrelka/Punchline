@@ -1,6 +1,7 @@
 package com.raywenderlich.android.punchline
 
 import com.jakewharton.retrofit2.adapter.rxjava2.RxJava2CallAdapterFactory
+import junit.framework.Assert.assertEquals
 import okhttp3.mockwebserver.MockResponse
 import okhttp3.mockwebserver.MockWebServer
 import org.junit.Rule
@@ -39,6 +40,19 @@ class JokeServiceTestUsingMockWebServer {
     val testObserver = jokeService.getRandomJoke().test()
     testObserver.assertValue(Joke(id, joke))
 
+  }
+
+  @Test
+  fun getRandomJokeGetsRandomJokeJson() {
+    mockWebServer.enqueue(
+        MockResponse()
+            .setBody(testJson)
+            .setResponseCode(200))
+
+    val testObserver = jokeService.getRandomJoke().test()
+    testObserver.assertNoErrors()
+    assertEquals("/random_joke.json",
+        mockWebServer.takeRequest().path)
   }
 
 }
