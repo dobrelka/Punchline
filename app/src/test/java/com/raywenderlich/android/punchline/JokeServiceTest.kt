@@ -2,6 +2,8 @@ package com.raywenderlich.android.punchline
 
 import com.jakewharton.retrofit2.adapter.rxjava2.RxJava2CallAdapterFactory
 import com.nhaarman.mockitokotlin2.mock
+import com.nhaarman.mockitokotlin2.whenever
+import io.reactivex.Single
 import junit.framework.Assert.assertEquals
 import okhttp3.mockwebserver.MockResponse
 import okhttp3.mockwebserver.MockWebServer
@@ -60,6 +62,16 @@ class JokeServiceTestUsingMockWebServer {
 
     private val jokeService: JokeService = mock()
     private val repository = RepositoryImpl(jokeService)
+
+    @Test
+    fun getRandomJokeEmitsJoke() {
+      val joke = Joke(id, joke)
+      whenever(jokeService.getRandomJoke())
+          .thenReturn(Single.just(joke))
+
+      val testObserver = repository.getJoke().test()
+      testObserver.assertValue(joke)
+    }
 
   }
 
