@@ -8,7 +8,7 @@ import org.junit.Test
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
 
-private const val id = 6
+private const val id = "6"
 private const val joke = "How does a train eat? It goes chew, chew"
 private val testJson = """{ "id": $id, "joke": "$joke" }"""
 
@@ -37,7 +37,7 @@ class JokeServiceTestUsingMockWebServer {
             .setResponseCode(200))
 
     val testObserver = jokeService.getRandomJoke().test()
-    testObserver.assertValue(Joke("1", "joke"))
+    testObserver.assertValue(Joke(id, joke))
 
   }
 
