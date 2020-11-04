@@ -1,11 +1,14 @@
 package com.raywenderlich.android.punchline
 
 import com.jakewharton.retrofit2.adapter.rxjava2.RxJava2CallAdapterFactory
+import okhttp3.mockwebserver.MockResponse
 import okhttp3.mockwebserver.MockWebServer
 import org.junit.Rule
 import org.junit.Test
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
+
+private val testJson = """{ "id": 1, "joke": "joke" }"""
 
 class JokeServiceTestUsingMockWebServer {
 
@@ -26,6 +29,10 @@ class JokeServiceTestUsingMockWebServer {
 
   @Test
   fun getRandomJokeEmitsJoke() {
+    mockWebServer.enqueue(
+        MockResponse()
+            .setBody(testJson)
+            .setResponseCode(200))
 
   }
 
