@@ -31,41 +31,40 @@
 20-->/home/dobrelka/Punchline/app/src/main/AndroidManifest.xml:12:7-52
 21        android:supportsRtl="true"
 21-->/home/dobrelka/Punchline/app/src/main/AndroidManifest.xml:13:7-33
-22        android:testOnly="true"
-23        android:theme="@style/AppTheme" >
-23-->/home/dobrelka/Punchline/app/src/main/AndroidManifest.xml:14:7-38
-24
-25        <!-- Splash Activity -->
-26        <activity android:name="com.raywenderlich.android.punchline.app.SplashActivity" >
-26-->/home/dobrelka/Punchline/app/src/main/AndroidManifest.xml:17:5-23:16
-26-->/home/dobrelka/Punchline/app/src/main/AndroidManifest.xml:17:15-84
-27            <intent-filter>
-27-->/home/dobrelka/Punchline/app/src/main/AndroidManifest.xml:18:7-22:23
-28                <action android:name="android.intent.action.MAIN" />
-28-->/home/dobrelka/Punchline/app/src/main/AndroidManifest.xml:19:9-60
-28-->/home/dobrelka/Punchline/app/src/main/AndroidManifest.xml:19:17-58
-29
-30                <category android:name="android.intent.category.LAUNCHER" />
-30-->/home/dobrelka/Punchline/app/src/main/AndroidManifest.xml:21:9-68
-30-->/home/dobrelka/Punchline/app/src/main/AndroidManifest.xml:21:19-66
-31            </intent-filter>
-32        </activity>
-33
-34        <!-- Main Activity -->
-35        <activity android:name="com.raywenderlich.android.punchline.MainActivity" />
-35-->/home/dobrelka/Punchline/app/src/main/AndroidManifest.xml:26:5-80
-35-->/home/dobrelka/Punchline/app/src/main/AndroidManifest.xml:26:15-78
-36
-37        <provider
-37-->[androidx.lifecycle:lifecycle-process:2.0.0] /home/dobrelka/.gradle/caches/transforms-2/files-2.1/3ef3525d7b47ab95914a693a7c1e023c/lifecycle-process-2.0.0/AndroidManifest.xml:23:9-27:43
-38            android:name="androidx.lifecycle.ProcessLifecycleOwnerInitializer"
-38-->[androidx.lifecycle:lifecycle-process:2.0.0] /home/dobrelka/.gradle/caches/transforms-2/files-2.1/3ef3525d7b47ab95914a693a7c1e023c/lifecycle-process-2.0.0/AndroidManifest.xml:24:13-79
-39            android:authorities="com.raywenderlich.android.punchline.lifecycle-process"
-39-->[androidx.lifecycle:lifecycle-process:2.0.0] /home/dobrelka/.gradle/caches/transforms-2/files-2.1/3ef3525d7b47ab95914a693a7c1e023c/lifecycle-process-2.0.0/AndroidManifest.xml:25:13-69
-40            android:exported="false"
-40-->[androidx.lifecycle:lifecycle-process:2.0.0] /home/dobrelka/.gradle/caches/transforms-2/files-2.1/3ef3525d7b47ab95914a693a7c1e023c/lifecycle-process-2.0.0/AndroidManifest.xml:26:13-37
-41            android:multiprocess="true" />
-41-->[androidx.lifecycle:lifecycle-process:2.0.0] /home/dobrelka/.gradle/caches/transforms-2/files-2.1/3ef3525d7b47ab95914a693a7c1e023c/lifecycle-process-2.0.0/AndroidManifest.xml:27:13-40
-42    </application>
-43
-44</manifest>
+22        android:theme="@style/AppTheme" >
+22-->/home/dobrelka/Punchline/app/src/main/AndroidManifest.xml:14:7-38
+23
+24        <!-- Splash Activity -->
+25        <activity android:name="com.raywenderlich.android.punchline.app.SplashActivity" >
+25-->/home/dobrelka/Punchline/app/src/main/AndroidManifest.xml:17:5-23:16
+25-->/home/dobrelka/Punchline/app/src/main/AndroidManifest.xml:17:15-84
+26            <intent-filter>
+26-->/home/dobrelka/Punchline/app/src/main/AndroidManifest.xml:18:7-22:23
+27                <action android:name="android.intent.action.MAIN" />
+27-->/home/dobrelka/Punchline/app/src/main/AndroidManifest.xml:19:9-60
+27-->/home/dobrelka/Punchline/app/src/main/AndroidManifest.xml:19:17-58
+28
+29                <category android:name="android.intent.category.LAUNCHER" />
+29-->/home/dobrelka/Punchline/app/src/main/AndroidManifest.xml:21:9-68
+29-->/home/dobrelka/Punchline/app/src/main/AndroidManifest.xml:21:19-66
+30            </intent-filter>
+31        </activity>
+32
+33        <!-- Main Activity -->
+34        <activity android:name="com.raywenderlich.android.punchline.MainActivity" />
+34-->/home/dobrelka/Punchline/app/src/main/AndroidManifest.xml:26:5-80
+34-->/home/dobrelka/Punchline/app/src/main/AndroidManifest.xml:26:15-78
+35
+36        <provider
+36-->[androidx.lifecycle:lifecycle-process:2.0.0] /home/dobrelka/.gradle/caches/transforms-2/files-2.1/3ef3525d7b47ab95914a693a7c1e023c/lifecycle-process-2.0.0/AndroidManifest.xml:23:9-27:43
+37            android:name="androidx.lifecycle.ProcessLifecycleOwnerInitializer"
+37-->[androidx.lifecycle:lifecycle-process:2.0.0] /home/dobrelka/.gradle/caches/transforms-2/files-2.1/3ef3525d7b47ab95914a693a7c1e023c/lifecycle-process-2.0.0/AndroidManifest.xml:24:13-79
+38            android:authorities="com.raywenderlich.android.punchline.lifecycle-process"
+38-->[androidx.lifecycle:lifecycle-process:2.0.0] /home/dobrelka/.gradle/caches/transforms-2/files-2.1/3ef3525d7b47ab95914a693a7c1e023c/lifecycle-process-2.0.0/AndroidManifest.xml:25:13-69
+39            android:exported="false"
+39-->[androidx.lifecycle:lifecycle-process:2.0.0] /home/dobrelka/.gradle/caches/transforms-2/files-2.1/3ef3525d7b47ab95914a693a7c1e023c/lifecycle-process-2.0.0/AndroidManifest.xml:26:13-37
+40            android:multiprocess="true" />
+40-->[androidx.lifecycle:lifecycle-process:2.0.0] /home/dobrelka/.gradle/caches/transforms-2/files-2.1/3ef3525d7b47ab95914a693a7c1e023c/lifecycle-process-2.0.0/AndroidManifest.xml:27:13-40
+41    </application>
+42
+43</manifest>

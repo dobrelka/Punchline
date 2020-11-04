@@ -3,6 +3,7 @@ package com.raywenderlich.android.punchline
 import com.jakewharton.retrofit2.adapter.rxjava2.RxJava2CallAdapterFactory
 import okhttp3.mockwebserver.MockWebServer
 import org.junit.Rule
+import org.junit.Test
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
 
@@ -21,6 +22,11 @@ class JokeServiceTestUsingMockWebServer {
 
   private val jokeService by lazy {
     retrofit.create(JokeService::class.java)
+  }
+
+  @Test
+  fun getRandomJokeEmitsJoke() {
+
   }
 
 }
