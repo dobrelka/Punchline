@@ -2,7 +2,10 @@ package com.raywenderlich.android.punchline
 
 import androidx.test.ext.junit.runners.AndroidJUnit4
 import com.github.javafaker.Faker
+import com.nhaarman.mockitokotlin2.whenever
+import io.reactivex.Single
 import org.junit.Before
+import org.junit.Test
 import org.junit.runner.RunWith
 import org.koin.test.KoinTest
 import org.koin.test.inject
@@ -17,5 +20,14 @@ class MainActivityTest: KoinTest {
   @Before
   fun setUp() {
     declareMock<Repository>()
+  }
+
+  @Test
+  fun onLaunchButtonIsDisplayed() {
+    whenever(mockRepository.getJoke())
+        .thenReturn(Single.just(Joke(
+            faker.idNumber().valid(),
+            faker.lorem().sentence())))
+
   }
 }
