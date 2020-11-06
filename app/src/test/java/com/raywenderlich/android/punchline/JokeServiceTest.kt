@@ -1,5 +1,6 @@
 package com.raywenderlich.android.punchline
 
+import com.github.javafaker.Faker
 import com.jakewharton.retrofit2.adapter.rxjava2.RxJava2CallAdapterFactory
 import com.nhaarman.mockitokotlin2.mock
 import com.nhaarman.mockitokotlin2.whenever
@@ -73,6 +74,27 @@ class JokeServiceTestUsingMockWebServer {
       testObserver.assertValue(joke)
     }
 
+  }
+
+  class JokerServiceTestUsingFaker {
+
+    var faker = Faker()
+    private val jokeService: JokeService = mock()
+    private val repository = RepositoryImpl(jokeService)
+
+    @Test
+    fun getRandomJokeEmitsJoke() {
+      val joke = Joke(
+          faker.idNumber().valid(),
+          faker.lorem().sentence())
+
+      whenever(jokeService.getRandomJoke())
+          .thenReturn(Single.just(joke))
+
+      val testObserver = repository.getJoke().test()
+      testObserver.assertValue(joke)
+
+    }
   }
 
 }
