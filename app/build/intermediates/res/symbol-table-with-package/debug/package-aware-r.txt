@@ -885,6 +885,7 @@ id beginning
 id blocking
 id bottom
 id bounce
+id buttonNewJoke
 id buttonPanel
 id center
 id center_vertical
