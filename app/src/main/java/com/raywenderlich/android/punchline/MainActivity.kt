@@ -49,6 +49,9 @@ class MainActivity : AppCompatActivity() {
       render(uiModel)
     })
     viewModel.getJoke()
+    buttonNewJoke.setOnClickListener {
+      viewModel.getJoke()
+    }
   }
 
   private fun render(uiModel: UiModel) {
