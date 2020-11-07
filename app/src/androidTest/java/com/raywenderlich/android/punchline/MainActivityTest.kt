@@ -2,6 +2,7 @@ package com.raywenderlich.android.punchline
 
 import androidx.test.core.app.ActivityScenario
 import androidx.test.espresso.Espresso.onView
+import androidx.test.espresso.action.ViewActions.click
 import androidx.test.espresso.assertion.ViewAssertions
 import androidx.test.espresso.assertion.ViewAssertions.matches
 import androidx.test.espresso.matcher.ViewMatchers.*
@@ -50,6 +51,26 @@ class MainActivityTest: KoinTest {
         .thenReturn(Single.just(joke))
 
     ActivityScenario.launch(MainActivity::class.java)
+    onView(withId(R.id.textJoke))
+        .check(matches(withText(joke.joke)))
+  }
+
+  @Test
+  fun onButtonClickNewJokeIsDisplayed() {
+    whenever(mockRepository.getJoke())
+        .thenReturn(Single.just(Joke(
+            faker.idNumber().valid(),
+            faker.lorem().sentence())))
+    ActivityScenario.launch(MainActivity::class.java)
+
+    val joke = Joke(
+        faker.idNumber().valid(),
+        faker.lorem().sentence())
+    whenever(mockRepository.getJoke())
+        .thenReturn(Single.just(joke))
+
+    onView(withId(R.id.buttonNewJoke))
+        .perform(click())
     onView(withId(R.id.textJoke))
         .check(matches(withText(joke.joke)))
   }
