@@ -42,10 +42,11 @@ class MainActivityTest: KoinTest {
 
   @Test
   fun onLaunchJokeIsDisplayed() {
+    val joke = Joke(
+        faker.idNumber().valid(),
+        faker.lorem().sentence())
     whenever(mockRepository.getJoke())
-        .thenReturn(Single.just(Joke(
-            faker.idNumber().valid(),
-            faker.lorem().sentence())))
+        .thenReturn(Single.just(joke))
 
     ActivityScenario.launch(MainActivity::class.java)
     onView(withId(R.id.textJoke))

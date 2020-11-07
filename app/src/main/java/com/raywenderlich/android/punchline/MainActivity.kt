@@ -59,6 +59,7 @@ class MainActivity : AppCompatActivity() {
   }
 
   private fun showJoke(joke: Joke) {
+    textJoke.text = joke.joke
   }
 
   private fun showError(error: String) {
