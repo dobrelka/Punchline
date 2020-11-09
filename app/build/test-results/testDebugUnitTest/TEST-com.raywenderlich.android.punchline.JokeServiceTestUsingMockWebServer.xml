@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.raywenderlich.android.punchline.JokeServiceTestUsingMockWebServer" tests="2" skipped="0" failures="0" errors="0" timestamp="2020-11-07T16:04:03" hostname="mrblack" time="0.097">
+  <properties/>
+  <testcase name="getRandomJokeGetsRandomJokeJson" classname="com.raywenderlich.android.punchline.JokeServiceTestUsingMockWebServer" time="0.092"/>
+  <testcase name="getRandomJokeEmitsJoke" classname="com.raywenderlich.android.punchline.JokeServiceTestUsingMockWebServer" time="0.004"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[Nov 07, 2020 6:04:03 PM okhttp3.mockwebserver.MockWebServer$2 execute
+INFO: MockWebServer[49257] starting to accept connections
+Nov 07, 2020 6:04:03 PM okhttp3.mockwebserver.MockWebServer$3 processOneRequest
+INFO: MockWebServer[49257] received request: GET /random_joke.json HTTP/1.1 and responded: HTTP/1.1 200 OK
+Nov 07, 2020 6:04:03 PM okhttp3.mockwebserver.MockWebServer$2 acceptConnections
+INFO: MockWebServer[49257] done accepting connections: Socket closed
+Nov 07, 2020 6:04:03 PM okhttp3.mockwebserver.MockWebServer$2 execute
+INFO: MockWebServer[41127] starting to accept connections
+Nov 07, 2020 6:04:03 PM okhttp3.mockwebserver.MockWebServer$3 processOneRequest
+INFO: MockWebServer[41127] received request: GET /random_joke.json HTTP/1.1 and responded: HTTP/1.1 200 OK
+Nov 07, 2020 6:04:03 PM okhttp3.mockwebserver.MockWebServer$2 acceptConnections
+INFO: MockWebServer[41127] done accepting connections: Socket closed
+]]></system-err>
+</testsuite>

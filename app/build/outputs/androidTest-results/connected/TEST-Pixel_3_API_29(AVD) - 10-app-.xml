@@ -1,0 +1,12 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<testsuite name="com.raywenderlich.android.punchline.JokeTest" tests="4" failures="0" errors="0" skipped="0" time="6.954" timestamp="2020-11-09T16:53:54" hostname="localhost">
+  <properties>
+    <property name="device" value="Pixel_3_API_29(AVD) - 10" />
+    <property name="flavor" value="" />
+    <property name="project" value="app" />
+  </properties>
+  <testcase name="jokeReturnsJoke" classname="com.raywenderlich.android.punchline.JokeTest" time="0.003" />
+  <testcase name="onLaunchButtonIsDisplayed" classname="com.raywenderlich.android.punchline.MainActivityTest" time="1.308" />
+  <testcase name="onLaunchJokeIsDisplayed" classname="com.raywenderlich.android.punchline.MainActivityTest" time="0.503" />
+  <testcase name="onButtonClickNewJokeIsDisplayed" classname="com.raywenderlich.android.punchline.MainActivityTest" time="0.905" />
+</testsuite>

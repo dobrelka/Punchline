@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.raywenderlich.android.punchline.JokeServiceTestUsingMockWebServer$JokeServiceTestMockingService" tests="1" skipped="0" failures="0" errors="0" timestamp="2020-11-07T16:04:03" hostname="mrblack" time="0.0">
+  <properties/>
+  <testcase name="getRandomJokeEmitsJoke" classname="com.raywenderlich.android.punchline.JokeServiceTestUsingMockWebServer$JokeServiceTestMockingService" time="0.0"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
